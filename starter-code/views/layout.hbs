@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="/javascripts/strength.js"></script>
+<script type="text/javascript" src="js.js"></script>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +12,16 @@
   <title>{{title}}</title>
   <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
+
 <body>
-
+  {{#if user}}
+  <a href="/logout">Logout</a>
+  {{else}}
+  <a href="/signup">Sign up</a>
+  <a href="/login">Login</a>
+  {{/if}}
   {{{body}}}
-
   <script src="/javascripts/script.js"></script>
 </body>
+
 </html>
